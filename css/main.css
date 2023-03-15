@@ -40,3 +40,8 @@ Helper classes with ability to override anything that comes before it
 */
 
 {% include './utilities/_helper.css' %}
+
+
+    /* bootstrap
+*/ 
+{% include './vendor/bootstrap.css' %} 

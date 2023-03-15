@@ -19,7 +19,20 @@
           }
         },
         "default": {
-          "color": "#494A52"
+          "color": "#0B42FF"
+        }
+      },
+      {
+        "label": "Primary Dark",
+        "name": "primary_dark",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "default": {
+          "color": "#031040"
         }
       },
       {
@@ -33,11 +46,24 @@
         },
         "inherited_value": {
           "property_value_paths": {
-            "color": "brandSettings.colors[1]"
+            "color": "brandSettings.colors[2]"
           }
         },
         "default": {
-          "color": "#F8FAFC"
+          "color": "#E7ECFF"
+        }
+      },
+      {
+        "label": "Font color",
+        "name": "font_color",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "default": {
+          "color": "#000"
         }
       }
     ]
@@ -59,12 +85,12 @@
         },
         "inherited_value": {
           "property_value_paths": {
-            "color": "theme.global_colors.primary.color"
+            "color": "theme.global_colors.font_color.color"
           }
         },
         "default": {
           "fallback": "sans-serif",
-          "font": "Lato",
+          "font": "Iter",
           "font_set": "GOOGLE"
         }
       },
@@ -80,12 +106,12 @@
         },
         "inherited_value": {
           "property_value_paths": {
-            "color": "theme.global_colors.primary.color"
+            "color": "theme.global_colors.font_color.color"
           }
         },
         "default": {
           "fallback": "serif",
-          "font": "Merriweather",
+          "font": "Montserrat",
           "font_set": "GOOGLE"
         }
       }
@@ -389,7 +415,7 @@
               }
             },
             "default": {
-              "size": 24,
+              "size": 16,
               "size_unit": "px"
             }
           }
@@ -417,9 +443,9 @@
               }
             },
             "default": {
-              "color": "#0270E0",
+              "color": "#0b42ff",
               "styles": {
-                "text-decoration": "none"
+                "text-decoration": "underline"
               }
             }
           }
@@ -450,7 +476,7 @@
             },
             "default": {
               "color": "#FFFFFF",
-              "size": 22,
+              "size": 18,
               "size_unit": "px"
             }
           },
@@ -509,39 +535,39 @@
             "default": {
               "top": {
                 "width": {
-                  "value": 1,
+                  "value": 0,
                   "units": "px"
                 },
                 "opacity": 100,
                 "style": "solid",
-                "color": "#494A52"
+                "color": "theme.global_fonts.primary.color"
               },
               "right": {
                 "width": {
-                  "value": 1,
+                  "value": 0,
                   "units": "px"
                 },
                 "opacity": 100,
                 "style": "solid",
-                "color": "#494A52"
+                "color": "theme.global_fonts.primary.color"
               },
               "bottom": {
                 "width": {
-                  "value": 1,
+                  "value": 0,
                   "units": "px"
                 },
                 "opacity": 100,
                 "style": "solid",
-                "color": "#494A52"
+                "color": "theme.global_fonts.primary.color"
               },
               "left": {
                 "width": {
-                  "value": 1,
+                  "value": 0,
                   "units": "px"
                 },
                 "opacity": 100,
                 "style": "solid",
-                "color": "#494A52"
+                "color": "theme.global_fonts.primary.color"
               }
             }
           }
@@ -560,7 +586,7 @@
             "max": 100,
             "step": 1,
             "suffix": "px",
-            "default": 6
+            "default": 10
           }
         ]
       },
@@ -581,19 +607,19 @@
             "default": {
               "padding": {
                 "top": {
-                  "value": 15,
+                  "value": 18,
                   "units": "px"
                 },
                 "right": {
-                  "value": 53,
+                  "value": 24,
                   "units": "px"
                 },
                 "bottom": {
-                  "value": 15,
+                  "value": 18,
                   "units": "px"
                 },
                 "left": {
-                  "value": 53,
+                  "value": 24,
                   "units": "px"
                 }
               }
@@ -633,7 +659,7 @@
                 "type": "color",
                 "default": {
                   "opacity": 100,
-                  "color": "#1a334e"
+                  "color": "#031040"
                 }
               }
             ]
@@ -650,39 +676,39 @@
                 "default": {
                   "top": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#1a334e"
+                    "color": "#031040"
                   },
                   "right": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#1a334e"
+                    "color": "#031040"
                   },
                   "bottom": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#1a334e"
+                    "color": "#031040"
                   },
                   "left": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#1a334e"
+                    "color": "#031040"
                   }
                 }
               }
@@ -701,7 +727,119 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 6
+                "default": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Focus",
+        "name": "focus",
+        "type": "group",
+        "children": [
+          {
+            "label": "Text",
+            "name": "text",
+            "type": "group",
+            "children": [
+              {
+                "label": "Color",
+                "name": "color",
+                "type": "color",
+                "default": {
+                  "color": "#ffffff",
+                  "opacity": 100
+                }
+              }
+            ]
+          },
+          {
+            "label": "Background",
+            "name": "background",
+            "type": "group",
+            "children": [
+              {
+                "label": "Color",
+                "name": "color",
+                "type": "color",
+                "visibility": {
+                  "hidden_subfields": {
+                    "opacity": true 
+                  }
+                },
+                "inherited_value": {
+                  "property_value_paths": {
+                    "color": "theme.global_colors.primary.color"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "label": "Border",
+            "name": "border",
+            "type": "group",
+            "children": [
+              {
+                "label": "Border",
+                "name": "border",
+                "type": "border",
+                "default": {
+                  "top": {
+                    "width": {
+                      "value": 0,
+                      "units": "px"
+                    },
+                    "opacity": 100,
+                    "style": "solid",
+                    "color": "#031040" 
+                  },
+                  "right": {
+                    "width": {
+                      "value": 0,
+                      "units": "px"
+                    },
+                    "opacity": 100,
+                    "style": "solid",
+                    "color": "#031040"
+                  },
+                  "bottom": {
+                    "width": {
+                      "value": 0,
+                      "units": "px"
+                    },
+                    "opacity": 100,
+                    "style": "solid",
+                    "color": "#031040"
+                  },
+                  "left": {
+                    "width": {
+                      "value": 0,
+                      "units": "px"
+                    },
+                    "opacity": 100,
+                    "style": "solid",
+                    "color": "#031040"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "label": "Corner",
+            "name": "corner",
+            "type": "group",
+            "children": [
+              {
+                "label": "Radius",
+                "name": "radius",
+                "type": "number",
+                "display": "text",
+                "max": 100,
+                "step": 1,
+                "suffix": "px",
+                "default": 10
               }
             ]
           }
@@ -874,7 +1012,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               },
               {
                 "label": "Top Right Radius",
@@ -884,7 +1022,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               },
               {
                 "label": "Bottom Left Radius",
@@ -894,7 +1032,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               },
               {
                 "label": "Bottom Right Radius",
@@ -904,7 +1042,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               }
             ]
           }
@@ -1096,7 +1234,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 3
+                "default": 10
               }
             ]
           }
@@ -1127,7 +1265,7 @@
                 "validation_regex": "",
                 "default": {
                   "color": "#FFFFFF",
-                  "size": 22,
+                  "size": 18,
                   "size_unit": "px"
                 }
               }
@@ -1480,7 +1618,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               },
               {
                 "label": "Top Right Radius",
@@ -1490,7 +1628,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               },
               {
                 "label": "Bottom Left Radius",
@@ -1500,7 +1638,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               },
               {
                 "label": "Bottom Right Radius",
@@ -1510,7 +1648,7 @@
                 "max": 100,
                 "step": 1,
                 "suffix": "px",
-                "default": 0
+                "default": 10
               }
             ]
           }
@@ -1727,7 +1865,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#494A52"
+                    "color": "theme.global_fonts.primary.color"
                   },
                   "right": {
                     "width": {
@@ -1736,7 +1874,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#494A52"
+                    "color": "theme.global_fonts.primary.color"
                   },
                   "bottom": {
                     "width": {
@@ -1745,7 +1883,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#494A52"
+                    "color": "theme.global_fonts.primary.color"
                   },
                   "left": {
                     "width": {
@@ -1754,7 +1892,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#494A52"
+                    "color": "theme.global_fonts.primary.color"
                   }
                 }
               }
@@ -1864,7 +2002,7 @@
                         },
                         "opacity": 100,
                         "style": "solid",
-                        "color": "#494A52"
+                        "color": "theme.global_fonts.primary.color"
                       },
                       "right": {
                         "width": {
@@ -1873,7 +2011,7 @@
                         },
                         "opacity": 100,
                         "style": "solid",
-                        "color": "#494A52"
+                        "color": "theme.global_fonts.primary.color"
                       },
                       "bottom": {
                         "width": {
@@ -1882,7 +2020,7 @@
                         },
                         "opacity": 100,
                         "style": "solid",
-                        "color": "#494A52"
+                        "color": "theme.global_fonts.primary.color"
                       },
                       "left": {
                         "width": {
@@ -1891,7 +2029,7 @@
                         },
                         "opacity": 100,
                         "style": "solid",
-                        "color": "#494A52"
+                        "color": "theme.global_fonts.primary.color"
                       }
                     }
                   }
