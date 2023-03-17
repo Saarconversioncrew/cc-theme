@@ -29,18 +29,18 @@ Example:
   color: {{ color('theme.color_field_name') }}
 }
 
-#}
+#} 
 
 {% macro color(value) %}
-
-  {% set colorhex = value.color|convert_rgb %}
-  {% if value.opacity != null %}
-    {% set coloropacity = value.opacity / 100 %}
+  {% if value.color is defined %}
+    {% set colorhex = value.color|convert_rgb %}
+    {% if value.opacity is defined %}
+      {% set coloropacity = value.opacity / 100 %}
+    {% else %}
+      {% set coloropacity = '1' %}
+    {% endif %}
+    rgba({{ colorhex }}, {{ coloropacity }})
   {% else %}
-    {% set coloropacity = '1' %}
+    // Handle case where value.color is null or undefined
   {% endif %}
-
-
-  rgba({{ colorhex }}, {{ coloropacity }})
-
 {% endmacro %}
