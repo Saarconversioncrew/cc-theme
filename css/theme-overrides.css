@@ -389,7 +389,7 @@ form textarea {
 }
 
 .fn-date-picker td .pika-button:hover {
-  background-color: {{ primary_color }} !important;
+  background-color: {{ primary_dark_color }} !important;
 }
 
 .fn-date-picker td.is-today .pika-button {

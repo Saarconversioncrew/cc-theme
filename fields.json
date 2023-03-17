@@ -670,14 +670,18 @@
             "label": "Background",
             "name": "background",
             "type": "group",
-            "children": [
+            "children": [ 
               {
                 "label": "Color",
                 "name": "color",
                 "type": "color",
+                "inherited_value": {
+                  "property_value_paths": {
+                    "color": "theme.global_colors.primary_dark.color"
+                  }
+                },
                 "default": {
-                  "opacity": 100,
-                  "color": "#1a334e"
+                  "opacity": 100
                 }
               }
             ]
@@ -1308,9 +1312,13 @@
                     "label": "Color",
                     "name": "color",
                     "type": "color",
+                    "inherited_value": {
+                      "property_value_paths": {
+                        "color": "theme.global_colors.primary_dark.color"
+                      }
+                    },
                     "default": {
-                      "opacity": 100,
-                      "color": "#1a334e"
+                      "opacity": 100
                     }
                   }
                 ]
