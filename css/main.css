@@ -10,13 +10,6 @@ Bootstrap framework basis
 */ 
 {% include '../vendor/bootstrap/css/bootstrap.min.css' %} 
 
-/* Generic
-This is where reset, normalize & box-sizing styles go.
-*/
-
-{% include './generic/_reset.css' %}
-{% include './generic/_normalize.css' %}
-
 /* Objects
 Non-cosmetic design patterns including grid and layout classes)
 */
