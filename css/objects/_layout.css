@@ -24,7 +24,7 @@
 
 /* Desktop layout */
 
-@media (min-width: 768px) {
+@media (min-width: 767.98px) {
   .row-fluid {
     flex-wrap: nowrap;
     justify-content: space-between;
