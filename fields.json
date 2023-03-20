@@ -62,6 +62,23 @@
         }
       },
       {
+        "label": "Warning",
+        "name": "warning",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "display_width": null,
+        "locked": false,
+        "required": false,
+        "inherited_value": {},
+        "default": {
+          "color": "#ffc107"
+        }
+      },
+      {
         "label": "Global font color",
         "name": "global_font_color",
         "type": "color",
