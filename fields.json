@@ -1395,6 +1395,104 @@
                 ]
               }
             ]
+          },
+          {
+            "label": "Focus",
+            "name": "focus",
+            "type": "group",
+            "children": [
+              {
+                "label": "Background",
+                "name": "background",
+                "type": "group",
+                "children": [
+                  {
+                    "label": "Color",
+                    "name": "color",
+                    "type": "color",
+                    "inherited_value": {
+                      "property_value_paths": {
+                        "color": "theme.global_colors.primary_dark.color"
+                      }
+                    },
+                    "default": {
+                      "opacity": 100
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "Border",
+                "name": "border",
+                "type": "group",
+                "children": [
+                  {
+                    "label": "Border",
+                    "name": "border",
+                    "type": "border",
+                    "allow_custom_border_sides": false,
+                    "default": {
+                      "top": {
+                        "width": {
+                          "value": 1,
+                          "units": "px"
+                        },
+                        "color": "#1a334e",
+                        "opacity": 100,
+                        "style": "none"
+                      },
+                      "right": {
+                        "width": {
+                          "value": 1,
+                          "units": "px"
+                        },
+                        "color": "#1a334e",
+                        "opacity": 100,
+                        "style": "none"
+                      },
+                      "bottom": {
+                        "width": {
+                          "value": 1,
+                          "units": "px"
+                        },
+                        "color": "#1a334e",
+                        "opacity": 100,
+                        "style": "none"
+                      },
+                      "left": {
+                        "width": {
+                          "value": 1,
+                          "units": "px"
+                        },
+                        "color": "#1a334e",
+                        "opacity": 100,
+                        "style": "none"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "Text",
+                "name": "text",
+                "type": "group",
+                "children": [
+                  {
+                    "label": "Color",
+                    "name": "color",
+                    "type": "color",
+                    "visibility": {
+                      "hidden_subfields": {
+                        "opacity": true
+                      }
+                    },
+                    "default": {
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
