@@ -32,8 +32,8 @@
 }
 
 @media (max-width: 767px) {
-  .header__container {
-    flex-direction: column;
+  .header__container { 
+    flex-direction: inherit;
     padding: 1rem 0 0;
   }
 
@@ -46,8 +46,11 @@
   }
 
   .header__row-2 {
-    justify-content: center;
+    justify-content: center; 
     padding: 1.05rem;
+  }
+  .header-button {
+    display:none;
   }
 }
 
@@ -86,7 +89,6 @@
 
 @media (max-width: 767px) {
   .header__logo {
-    margin: 0 auto;
     width: 100%;
   }
 }
@@ -457,5 +459,8 @@
 
   .header__close--toggle.show {
     display: block;
+  }
+  .header {
+    padding:0.5rem; 
   }
 }
