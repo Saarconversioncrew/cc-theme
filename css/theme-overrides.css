@@ -475,7 +475,6 @@
   .header__language-switcher-label-current,
   .header__language-switcher .lang_list_class li a {
     color: {{ nav_font_color }};
-    font-family: {{ body_font.font }};
   }
   
   .menu__child-toggle-icon {
