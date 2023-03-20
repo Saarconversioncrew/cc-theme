@@ -5,6 +5,11 @@ Any animations, or functions used throughout the project.
 Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
 */
 
+/* Bootstrap 5
+Bootstrap framework basis
+*/ 
+{% include '../vendor/bootstrap/css/bootstrap.min.css' %} 
+
 /* Generic
 This is where reset, normalize & box-sizing styles go.
 */
@@ -42,6 +47,3 @@ Helper classes with ability to override anything that comes before it
 {% include './utilities/_helper.css' %}
 
 
-    /* bootstrap
-*/ 
-{% include './vendor/bootstrap.css' %} 
