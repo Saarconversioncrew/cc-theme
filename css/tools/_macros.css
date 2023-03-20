@@ -10,37 +10,37 @@
 
 {% set macros = true %}
 
-{###########################################################################}
-{########################   Color Field CSS Mapper   #######################}
-{###########################################################################}
-
-{#
-
-Creation of an rgba value that maps from a color field
-
-Usage:
-
-* Inside CSS block for an element, call macro using the base name for the color field in your fields.json file
-* The macro checks to see if opacity has a set value and uses '1' as a fallback should the parameter be hidden or unset.
-
-Example:
-
-.my-selector {
-  color: {{ color('theme.color_field_name') }}
-}
-
-#} 
-
-{% macro color(value) %}
-  {% if value.color is defined %}
+  {###########################################################################}
+  {########################   Color Field CSS Mapper   #######################}
+  {###########################################################################}
+  
+  {#
+  
+  Creation of an rgba value that maps from a color field
+  
+  Usage:
+  
+  * Inside CSS block for an element, call macro using the base name for the color field in your fields.json file
+  * The macro checks to see if opacity has a set value and uses '1' as a fallback should the parameter be hidden or unset.
+  
+  Example:
+  
+  .my-selector {
+    color: {{ color('theme.color_field_name') }}
+  }
+  
+  #}
+  
+  {% macro color(value) %}
+  
     {% set colorhex = value.color|convert_rgb %}
-    {% if value.opacity is defined %}
+    {% if value.opacity != null %}
       {% set coloropacity = value.opacity / 100 %}
     {% else %}
       {% set coloropacity = '1' %}
     {% endif %}
+  
+  
     rgba({{ colorhex }}, {{ coloropacity }})
-  {% else %}
-    // Handle case where value.color is null or undefined
-  {% endif %}
-{% endmacro %}
+  
+  {% endmacro %}
