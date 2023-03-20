@@ -2,7 +2,7 @@
   templateType: global_partial
   label: Website header
 -->
-<header class="navbar header">
+<header class="navbar fixed-top header">
 
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
@@ -26,8 +26,15 @@
       {% module "site_logo" 
         path="@hubspot/logo",
         override_default_logo="true",
-        company_logo_image.src="/cc-website-theme/images/logo.png",
-        width="100px"
+        img={
+          "alt" : "Logo",
+          "height" : 50,
+          "loading" : "disabled",
+          "override_inherited_src" : true,
+          "src" : "/cc-website-theme/images/logo.png",
+          "suppress_company_name" : true,
+          "width" : 100
+        }
        %}
     </div>
 
@@ -37,8 +44,9 @@
 
       {# Header navigation row one #}
 
-      <div class="header__row-1">
+     
         {% if content.translated_content.values()|selectattr("published")|length or is_listing_view and group.translations %}
+      <div class="header__row-1">
           <div class="header__language-switcher header--element">
             <div class="header__language-switcher--label">
               {% module "language-switcher"
@@ -49,8 +57,9 @@
               <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
             </div>
           </div>
+          </div>
         {% endif %}
-      </div>
+   
 
       {# Header navigation row two #}
 
@@ -68,7 +77,29 @@
           %}
         </div>
         <div class="header-button">
-        {% module "module_16793142696952" path="/cc-website-theme/modules/button", label="button" %}
+        {% module "module_16793142696952" 
+          path="/cc-website-theme/modules/button", 
+          label="button",
+          styles={
+            "alignment" : {
+              "alignment" : {
+                "horizontal_align" : "RIGHT"
+              }
+            },
+            "background" : {
+              "color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "text" : {
+              "font" : {
+                "color" : "#031633",
+                "font_set" : "DEFAULT"
+              }
+            }
+          }
+         %}
        </div>
       </div>
     </div>
