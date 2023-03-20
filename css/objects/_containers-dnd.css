@@ -3,7 +3,7 @@
   padding: 0 1rem;
 }
 
-@media screen and (min-width: 1380px) {
+@media screen and (min-width: 1400px) {
   .content-wrapper {
     padding: 0;
   }
@@ -17,7 +17,7 @@
   padding: 0 1rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .dnd-section .dnd-column {
     padding: 0;
   }
