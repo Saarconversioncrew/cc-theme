@@ -468,7 +468,7 @@
   
   .header {
     background-color: {{ header_bg_color }};
-    padding:1rem; 
+    padding:1rem;
   }
   
   .menu__link,
