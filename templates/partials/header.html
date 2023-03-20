@@ -2,7 +2,7 @@
   templateType: global_partial
   label: Website header
 -->
-<header class="header">
+<header class="navbar header">
 
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
@@ -18,12 +18,16 @@
 
   {# Main header #}
 
-  <div class="header__container content-wrapper">
+  <div class="header__container ">
 
     {# Header logo column #}
 
-    <div class="header__logo header__logo--main">
-      {% module "site_logo" path="@hubspot/logo" %}
+    <div class="navbar-brand header__logo header__logo--main">
+      {% module "site_logo" 
+        path="@hubspot/logo",
+        override_default_logo="true",
+        company_logo_image.src="/cc-website-theme/images/logo.png"
+       %}
     </div>
 
     {# Header navigation column #}
@@ -45,14 +49,6 @@
             </div>
           </div>
         {% endif %}
-        <div class="header__search header--element">
-          {% module "site_search"
-            path="@hubspot/search_input",
-            label="Search",
-            field_label="Search",
-            placeholder=""
-          %}
-        </div>
       </div>
 
       {# Header navigation row two #}
@@ -70,10 +66,11 @@
             label="Primary navigation"
           %}
         </div>
+        <div class="header-button">
+        {% module "module_16793142696952" path="/cc-website-theme/modules/button", label="button" %}
+       </div>
       </div>
-
     </div>
-
   </div>
 
   {# Bottom header drag and drop area #}
