@@ -26,17 +26,19 @@
             }
           %}
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+        <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </a>
         <div class="collapse navbar-collapse" id="main_nav">
           {% module "navigation-primary"
               path="../../modules/menu",
               label="Primary navigation"
             %}
+            <div class="cta-header">
             {% module "module_16793142696952" 
               path="/cc-website-theme/modules/button", 
               label="button header",
+              button_text="CTA",
               styles={
                 "alignment" : {
                   "alignment" : {
@@ -79,6 +81,7 @@
                 }
               }
               %}   
+          </div>
         </div>
        </div>
       </nav>

@@ -25,3 +25,8 @@
 .cc-navbar	.dropdown-menu{
   min-width: 100%;
 }
+@media (min-width: 992px) { 
+    .cc-navbar{
+    padding: 0 1rem;
+    }
+ }

@@ -1012,7 +1012,7 @@
                 "default": {
                   "top": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -1021,7 +1021,7 @@
                   },
                   "right": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -1030,7 +1030,7 @@
                   },
                   "bottom": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -1039,7 +1039,7 @@
                   },
                   "left": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -1071,7 +1071,7 @@
                 "step": 1,
                 "suffix": "px",
                 "required": false,
-                "default": 6
+                "default": 10
               }
             ],
             "display_width": null,
@@ -1858,7 +1858,7 @@
                     "default": {
                       "top": {
                         "width": {
-                          "value": 1,
+                          "value": 0,
                           "units": "px"
                         },
                         "color": "#1a334e",
@@ -1867,7 +1867,7 @@
                       },
                       "right": {
                         "width": {
-                          "value": 1,
+                          "value": 0,
                           "units": "px"
                         },
                         "color": "#1a334e",
@@ -1876,7 +1876,7 @@
                       },
                       "bottom": {
                         "width": {
-                          "value": 1,
+                          "value": 0,
                           "units": "px"
                         },
                         "color": "#1a334e",
@@ -1885,7 +1885,7 @@
                       },
                       "left": {
                         "width": {
-                          "value": 1,
+                          "value": 0,
                           "units": "px"
                         },
                         "color": "#1a334e",

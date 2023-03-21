@@ -10,25 +10,39 @@
       {% endif %}
 
       {# Menu items - submenus #}
-
-    .cc-navbar .dropdown-menu{
-     {{ module.styles.drop_downs.border.border_field.css }}
-    {% if module.styles.drop_downs.background.color.color %}
-      background-color: rgba({{ module.styles.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.drop_downs.background.color.opacity / 100 }});
-    {% endif %}
+      @media (min-width: 992px) {
+        .cc-navbar .dropdown-menu{
+        {{ module.styles.drop_downs.border.border_field.css }}
+        {% if module.styles.drop_downs.background.color.color %}
+          background-color: rgba({{ module.styles.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.drop_downs.background.color.opacity / 100 }});
+        {% endif %}
+      }
+   
+      .cc-navbar .dropdown-item,
+      .cc-navbar .dropdown-item:hover,
+      .cc-navbar .dropdown-item:focus {
+        {% if module.styles.drop_downs.background.color.color %}
+          background-color: rgba({{ module.styles.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.drop_downs.background.color.opacity / 100 }});
+        {% endif %}
+        {% if module.styles.drop_downs.text.color.color %}
+          color: {{ module.styles.drop_downs.text.color.color }};
+        {% endif %}
+      }
   }
-
-  .cc-navbar .dropdown-item,
-  .cc-navbar .dropdown-item:hover,
-  .cc-navbar .dropdown-item:focus {
-    {% if module.styles.drop_downs.background.color.color %}
-      background-color: rgba({{ module.styles.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.drop_downs.background.color.opacity / 100 }});
-    {% endif %}
-    {% if module.styles.drop_downs.text.color.color %}
-      color: {{ module.styles.drop_downs.text.color.color }};
-    {% endif %}
+  @media (max-width: 991.98px) { 
+    .cc-navbar .dropdown-menu,
+    .cc-navbar .dropdown-menu a,
+    .cc-navbar .dropdown-item,
+    .cc-navbar .dropdown-item:hover,
+    .cc-navbar .dropdown-item:focus{
+          border: none;
+          background-color: transparent;
+          color: {{ module.styles.text.color.color }};
+        }
+    .cc-navbar .megasubmenu a{
+        padding-left: 2rem;
+    }
   }
-
     {% end_scope_css %}
   </style>
 {% end_require_css %}
@@ -44,7 +58,7 @@
             {% for sublink in link.children %}
               {% if sublink.children %}
                 <li class="has-submenu">
-                <a class="dropdown-item dropdown-toggle" href="{{ sublink.url }}"> {{ sublink.label }}</a>
+                  <a class="dropdown-item dropdown-toggle" > {{ sublink.label }}</a>
                   {% for subsublink in sublink.children %}
                     <div class="megasubmenu dropdown-menu">
                       <a href="{{ subsublink.url }}" class="dropdown-item" >{{ subsublink.label }}</a>

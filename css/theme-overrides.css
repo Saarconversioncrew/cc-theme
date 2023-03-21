@@ -308,8 +308,8 @@
   .hs-blog-post-listing__post-button:hover,
   .hs-blog-post-listing__post-button:focus {
     {{ button_border_hover }};
-    color: {{ button_color_hover }};
-    background-color: {{ button_background_hover }};
+    color: {{ button_color_hover }}!important;
+    background-color: {{ button_background_hover }}!important;
     border-radius: {{ button_corner_radius_hover }};
   }
   
