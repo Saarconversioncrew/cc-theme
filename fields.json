@@ -188,20 +188,6 @@
         "min": 0,
         "required": false,
         "default": 80
-      },
-      {
-        "label": "Maximum content width",
-        "name": "maximum_content_width",
-        "type": "number",
-        "display": "slider",
-        "max": 2500,
-        "display_width": null,
-        "locked": false,
-        "step": 1,
-        "suffix": "px",
-        "min": 900,
-        "required": false,
-        "default": 1240
       }
     ],
     "display_width": null,
