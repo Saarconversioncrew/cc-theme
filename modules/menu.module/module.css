@@ -1,20 +1,27 @@
-.megasubmenu{ padding:1rem; }
+.cc-navbar .megasubmenu{ padding:0.5rem 0 ; }
 
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
-	.dropdown-menu .dropdown-toggle::after{
+  .cc-navbar	.dropdown-menu .dropdown-toggle::after{
 		border-top: .3em solid transparent;
 	    border-right: 0;
 	    border-bottom: .3em solid transparent;
 	    border-left: .3em solid;
 	}
 
-	.megasubmenu{ 
-		left:100%; top:0; min-height: 100%; min-width:500px;
+	.cc-navbar .megasubmenu{ 
+		left:100%; top:0; min-height: 100%; 
 	}
 
-	.dropdown-menu > li:hover .megasubmenu{
+	.cc-navbar .dropdown-menu > li:hover .megasubmenu{
 		display: block;
 	}
 }	
 /* ============ desktop view .end// ============ */
+
+.cc-navbar .megasubmenu{
+  margin:0.2rem 0 0 0.2rem;
+}
+.cc-navbar	.dropdown-menu{
+  min-width: 100%;
+}

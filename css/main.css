@@ -41,5 +41,7 @@ Helper classes with ability to override anything that comes before it
 */
 
 {% include './utilities/_helper.css' %}
-
+  /* Vendor
+*/  
+{% include './vendor/bootstrapoverrides.css' %}
 

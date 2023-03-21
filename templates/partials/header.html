@@ -2,15 +2,15 @@
   templateType: global_partial
   label: Website header
 -->
-<header>
-  <a href="#main-content" class="header__skip">Skip to content</a>
+<header class="cc-header">
+  <a href="#main-content" class="skip-to-content-link">Skip to content</a>
     {% dnd_area "header-top"
       label="Top header",
       class="content-wrapper"
     %}
     {% end_dnd_area %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main menu">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main menu">
+      <div class="container bd-gutter flex-wrap flex-lg-nowrap">
         <div class="navbar-brand">
           {% module "site_logo" 
             path="@hubspot/logo",
@@ -34,53 +34,54 @@
               path="../../modules/menu",
               label="Primary navigation"
             %}
+            {% module "module_16793142696952" 
+              path="/cc-website-theme/modules/button", 
+              label="button header",
+              styles={
+                "alignment" : {
+                  "alignment" : {
+                    "horizontal_align" : "CENTER"
+                  } 
+                },
+                "spacing" : {
+                "spacing" : {
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 12
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 12
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 12
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 12
+                    }
+                  }
+                }
+              },
+                "background" : {
+                  "color" : {
+                    "color" : "#FFFFFF",
+                    "opacity" : 100
+                  }
+                },
+                "text" : {
+                  "font" : {
+                    "color" : "#031633",
+                    "font_set" : "DEFAULT"
+                  }
+                }
+              }
+              %}   
         </div>
        </div>
       </nav>
    
-        {% module "module_16793142696952" 
-          path="/cc-website-theme/modules/button", 
-          label="button header",
-          styles={
-            "alignment" : {
-              "alignment" : {
-                "horizontal_align" : "CENTER"
-              } 
-            },
-            "spacing" : {
-            "spacing" : {
-              "padding" : {
-                "bottom" : {
-                  "units" : "px",
-                  "value" : 12
-                },
-                "left" : {
-                  "units" : "px",
-                  "value" : 12
-                },
-                "right" : {
-                  "units" : "px",
-                  "value" : 12
-                },
-                "top" : {
-                  "units" : "px",
-                  "value" : 12
-                }
-              }
-            }
-          },
-            "background" : {
-              "color" : {
-                "color" : "#FFFFFF",
-                "opacity" : 100
-              }
-            },
-            "text" : {
-              "font" : {
-                "color" : "#031633",
-                "font_set" : "DEFAULT"
-              }
-            }
-          }
-         %}
-</header>
+       
+</header> 

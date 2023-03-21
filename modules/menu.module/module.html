@@ -3,6 +3,31 @@
 {% require_css %}
   <style>
     {% scope_css %}
+      {% if module.styles.text.color.color %}
+       .cc-navbar .nav-link {
+          color: {{ module.styles.text.color.color }};
+        }
+      {% endif %}
+
+      {# Menu items - submenus #}
+
+    .cc-navbar .dropdown-menu{
+     {{ module.styles.drop_downs.border.border_field.css }}
+    {% if module.styles.drop_downs.background.color.color %}
+      background-color: rgba({{ module.styles.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.drop_downs.background.color.opacity / 100 }});
+    {% endif %}
+  }
+
+  .cc-navbar .dropdown-item,
+  .cc-navbar .dropdown-item:hover,
+  .cc-navbar .dropdown-item:focus {
+    {% if module.styles.drop_downs.background.color.color %}
+      background-color: rgba({{ module.styles.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.drop_downs.background.color.opacity / 100 }});
+    {% endif %}
+    {% if module.styles.drop_downs.text.color.color %}
+      color: {{ module.styles.drop_downs.text.color.color }};
+    {% endif %}
+  }
 
     {% end_scope_css %}
   </style>
@@ -19,7 +44,7 @@
             {% for sublink in link.children %}
               {% if sublink.children %}
                 <li class="has-submenu">
-                <a class="dropdown-item dropdown-toggle" href="#"> {{ sublink.label }}</a>
+                <a class="dropdown-item dropdown-toggle" href="{{ sublink.url }}"> {{ sublink.label }}</a>
                   {% for subsublink in sublink.children %}
                     <div class="megasubmenu dropdown-menu">
                       <a href="{{ subsublink.url }}" class="dropdown-item" >{{ subsublink.label }}</a>
@@ -50,7 +75,7 @@
 {# Desktop menu #}
 
 
-<ul class="navbar-nav">
+<ul class="cc-navbar navbar-nav">
   {{ menu_items() }}
 </ul>
 

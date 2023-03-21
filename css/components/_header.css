@@ -1,1 +1,30 @@
 /* Header */
+.cc-header .skip-to-content-link {
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #fff;
+    background: #fff;
+    color: #000;
+    text-decoration: none!important;
+    height: 30px; 
+    left: 0;
+    margin: 8px;
+    outline: none!important;
+    padding: 3px 10px;
+    position: absolute;
+    transform: translateY(-43px);
+    transition: transform .3s;
+    z-index: 1060;
+}
+.cc-header .skip-to-content-link:focus {
+    transform: translateY(0);
+}
+.cc-header .skip-to-content-link:hover {
+    color: #000;
+    text-decoration: underline!important;
+} 
+.cc-header .navbar-collapse{
+  justify-content: flex-end;
+}
+.cc-header .navbar-nav{
+  padding: 0 1rem;
+}
