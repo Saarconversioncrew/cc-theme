@@ -15,8 +15,6 @@ Non-cosmetic design patterns including grid and layout classes)
 */
 
 {% include './objects/_layout.css' %}
-{% include './objects/_containers-dnd.css' %}
-
 
 {% include './generic/_responsive.css' %}
 
