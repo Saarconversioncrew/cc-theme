@@ -107,6 +107,9 @@
     width: 100%;
   }
 }
+.dnd-section>.row-fluid {
+  margin: 0 auto;
+}
 @media (min-width: 576px) {
   .dnd-section>.row-fluid {
     max-width: 540px;
