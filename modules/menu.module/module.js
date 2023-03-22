@@ -42,9 +42,11 @@ document.addEventListener("DOMContentLoaded", function(){
 // Get the navbar-toggler and navbar elements
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbar = document.querySelector('.navbar');
+const body = document.querySelector('body');
 
 // Add an event listener to the navbar-toggler
 navbarToggler.addEventListener('click', function() {
   // Toggle the "mobile-show" class to the navbar
   navbar.classList.toggle('mobile-show');
+  body.classList.toggle('body-fixed'); 
 });

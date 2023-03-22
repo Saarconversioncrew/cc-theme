@@ -49,5 +49,7 @@
 .cc-navbar{
   padding-top: 2rem;
 }
-
+.body-fixed{
+  position:fixed;
+}
 }
