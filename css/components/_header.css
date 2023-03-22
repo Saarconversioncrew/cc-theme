@@ -28,7 +28,10 @@
 .cc-header .navbar-toggler {
   border: none;
 }
-.navbar-dark .navbar-toggler-icon {
+.cc-header .navbar{
+  height: 4.8rem;
+}
+.cc-header .navbar-dark .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg clip-rule='evenodd' fill='rgba(255, 255, 255, 1)' fill-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
 
