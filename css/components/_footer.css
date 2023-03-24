@@ -1,0 +1,13 @@
+.footer-section-cc{
+    background: #000;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+.footer__container li a{
+    color:#fff;
+}
+.footer__container ul{
+    list-style: none;
+    padding-left: 0;
+    padding-top: 1rem;
+}
