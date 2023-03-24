@@ -17,7 +17,7 @@
 {# Button #}
   <div class="row-button row">
     {% for item in module.button %}
-     <div class="col-{{ item.width_column }}">
+     <div class="col">
       <div class="button-wrapper">
         <a class="{% if item.button_style == "button-secondary" %} button-secondary {% else %} button {% endif %}" href="{{ href }}"
         {% if item.link.open_in_new_tab %} target="_blank"{% endif %}

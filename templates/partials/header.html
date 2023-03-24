@@ -35,51 +35,23 @@
               label="Primary navigation"
             %}
             <div class="cta-header">
-            {% module "module_16793142696952" 
-              path="/cc-website-theme/modules/button", 
-              label="button header",
-              button_text="CTA",
-              styles={
-                "alignment" : {
-                  "alignment" : {
-                    "horizontal_align" : "CENTER"
-                  } 
-                },
-                "spacing" : {
-                "spacing" : {
-                  "padding" : {
-                    "bottom" : {
-                      "units" : "px",
-                      "value" : 12
-                    },
-                    "left" : {
-                      "units" : "px",
-                      "value" : 12
-                    },
-                    "right" : {
-                      "units" : "px",
-                      "value" : 12
-                    },
-                    "top" : {
-                      "units" : "px",
-                      "value" : 12
-                    }
-                  }
+            {% module "module_16796634048982"
+            path="/cc-website-theme/modules/button",
+            offset=0,
+            width=12,
+            button=[ {
+              "button_style" : "button-secondary",
+              "button_text" : "Add a button link here",
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
                 }
               },
-                "background" : {
-                  "color" : {
-                    "color" : "#FFFFFF",
-                    "opacity" : 100
-                  }
-                },
-                "text" : {
-                  "font" : {
-                    "color" : "#031633",
-                    "font_set" : "DEFAULT"
-                  }
-                }
-              }
+              "width_column" : 6
+            } ]
               %}   
           </div>
         </div>
@@ -88,3 +60,4 @@
    
        
 </header> 
+

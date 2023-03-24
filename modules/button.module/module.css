@@ -6,3 +6,12 @@
 .row-button .button-wrapper{
   padding: 1rem 0;
 }
+.row-button .col{
+  width:fit-content;
+  flex: inherit;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.row-button{
+  flex-direction: row;
+}

@@ -55,19 +55,6 @@
     "preset" : null,
     "type" : "choice",
     "default" : "button"
-  }, {
-    "id" : "d63c8b18-03c9-a633-0677-27dedf15186c",
-    "name" : "width_column",
-    "display_width" : null,
-    "label" : "Width column",
-    "required" : false,
-    "locked" : false,
-    "display" : "text",
-    "min" : 3,
-    "max" : 6,
-    "step" : 1,
-    "type" : "number",
-    "default" : 6
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -82,19 +69,6 @@
       "open_in_new_tab" : false
     },
     "button_text" : "Add a button link here",
-    "button_style" : "button",
-    "width_column" : 6
-  }, {
-    "link" : {
-      "url" : {
-        "href" : "",
-        "type" : "EXTERNAL"
-      },
-      "no_follow" : false,
-      "open_in_new_tab" : false
-    },
-    "button_text" : "Add a button link here",
-    "button_style" : "button",
-    "width_column" : 6
+    "button_style" : "button"
   } ]
 } ]
