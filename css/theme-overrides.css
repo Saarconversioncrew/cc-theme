@@ -79,7 +79,11 @@
   {% set button_background_hover = color(theme.button_primary.hover.background.color) %}
   {% set button_border_hover = theme.button_primary.hover.border.border.css %}
   {% set button_corner_radius_hover = theme.button_primary.hover.corner.radius ~ 'px' %}
- 
+
+  {% set button_color_focus = color(theme.button_primary.focus.text.color) %}
+  {% set button_background_focus = color(theme.button_primary.focus.background.color) %}
+  {% set button_border_focus = theme.button_primary.focus.border.border.css %}
+  {% set button_corner_radius_focus = theme.button_primary.focus.corner.radius ~ 'px' %}
 
   {% set button_font_secondary = theme.button_secondary.text.font %}
   {% set button_text_transform_secondary = theme.button_secondary.text.transform %}
@@ -93,6 +97,10 @@
   {% set button_border_hover_secondary = theme.button_secondary.hover.border.border.css %}
   {% set button_corner_radius_hover_secondary = theme.button_secondary.hover.corner.radius ~ 'px' %}
   
+  {% set button_color_focus_secondary = color(theme.button_secondary.focus.text.color) %}
+  {% set button_background_focus_secondary = color(theme.button_secondary.focus.background.color) %}
+  {% set button_border_focus_secondary = theme.button_secondary.focus.border.border.css %}
+  {% set button_corner_radius_focus_secondary = theme.button_secondary.focus.corner.radius ~ 'px' %}
   /* 1e. Forms */
   {% set form_bg_color = color(theme.forms.form.background.color) %}
   
@@ -325,17 +333,49 @@
   }
   
   button:hover,
-  button:focus,
   .button:hover,
-  .button:focus,
-  .hs-blog-post-listing__post-button:hover,
-  .hs-blog-post-listing__post-button:focus {
+  .hs-blog-post-listing__post-button:hover {
     {{ button_border_hover }};
     color: {{ button_color_hover }}!important;
     background-color: {{ button_background_hover }}!important;
     border-radius: {{ button_corner_radius_hover }};
   }
-  
+  button:focus,
+  .button:focus,
+  .hs-blog-post-listing__post-button:focus,
+  button:focus-visible,
+  .button:focus-visible,
+  .hs-blog-post-listing__post-button:focus-visible {
+    {{ button_border_focus }};
+    color: {{ button_color_focus }}!important;
+    background-color: {{ button_background_focus }}!important;
+    border-radius: {{ button_corner_radius_focus }};
+  }
+  button:focus,
+  .button:focus,
+  .hs-blog-post-listing__post-button:focus,
+  button:focus-visible,
+  .button:focus-visible,
+  .hs-blog-post-listing__post-button:focus-visible, 
+  .button-secondary:focus,
+  .button-secondary:focus-visible{
+    outline: transparent;
+    text-decoration:none;
+  }
+  .button-secondary:hover{
+    {{ button_border_hover_secondary }};
+    color: {{ button_color_hover_secondary }}!important;
+    background-color: {{ button_background_hover_secondary }}!important;
+    border-radius: {{ button_corner_radius_hover_secondary }};
+  }
+  .button-secondary:focus,
+  .button-secondary:focus-visible {
+    {{ button_border_focus_secondary }};
+    color: {{ button_color_focus_secondary }}!important;
+    background-color: {{ button_background_focus_secondary }}!important;
+    border-radius: {{ button_corner_radius_focus_secondary }};
+  }
+
   button:active,
   .button:active,
   .hs-blog-post-listing__post-button:active {
