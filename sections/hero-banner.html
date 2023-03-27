@@ -3,40 +3,96 @@
   label: Hero banner
   isAvailableForNewContent: true
   screenshotPath: ../images/section-previews/hero-banner.png
-  description: "Full size background image section separated in two columns. Left column has heading and text and right column has a form."
+  description: "Hero banner with title, text, button and image. "
 -->
 {% dnd_section
-  background_color={{ context.background_color or "#f8fafc" }},
-  vertical_alignment="MIDDLE"
+  background_color="rgba(248, 250, 252, 1)",
+  padding={
+    "default" : {
+      "bottom" : "3rem",
+      "top" : "3rem"
+    }
+  },
+  full_width=false
 %}
-  {% dnd_module
-    path="@hubspot/linked_image",
-    img={
-      "alt": context.image_alt or "Stock placeholder image with grayscale geometrical mountain landscape",
-      "loading": context.image_loading or "disabled",
-      "max_height": context.image_height or 451,
-      "max_width": context.image_width or 605,
-      "size_type": "auto_custom_max",
-      "src": context.image or get_asset_url("../images/grayscale-mountain.png")
-    },
-    offset=0,
-    width=6
-  %}
-  {% end_dnd_module %}
   {% dnd_column
-    offset=6,
-    width=6
+    offset=0,
+    width=12
   %}
     {% dnd_row %}
-      {% dnd_module
-        path="@hubspot/rich_text"
-        html={{ context.content or "<h1>This is your main headline.</h1><p>Use this space to tell everyone about what you have to offer.</p>" }}
+      {% dnd_column
+        offset=0,
+        width=6
       %}
-      {% end_dnd_module %}
-    {% end_dnd_row %}
-    {% dnd_row %}
-      {% dnd_module path="@hubspot/form" %}
-      {% end_dnd_module %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12
+          %}
+            {% module_attribute "html" %}
+              <h1>This is your main headline.</h1>
+              <p>Use this space to tell everyone about what you have to offer.</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="/cc-website-theme/modules/button",
+            offset=0,
+            width=12,
+            button=[ {
+              "button_text" : "Add a button link here",
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "width_column" : 5
+            }, {
+              "button_style" : "button-secondary",
+              "button_text" : "Add a button link here",
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "width_column" : 6
+            } ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column
+        offset=6,
+        width=6
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="/linked-image",
+            offset=0, 
+            width=12,
+            img={
+              "alt" : "computer with clock",
+              "height" : 200,
+              "loading" : "disabled",
+              "max_height" : 2000,
+              "max_width" : 3000,
+              "size_type" : "auto",
+              "src" : "https://24266986.fs1.hubspotusercontent-na1.net/hubfs/24266986/pexels-pixabay-265129.jpg",
+              "width" : 300
+            },
+            style={ }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
     {% end_dnd_row %}
   {% end_dnd_column %}
-{% end_dnd_section %}
+{% end_dnd_section %} 

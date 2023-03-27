@@ -171,6 +171,10 @@
   {% set footer_bg_color = color(theme.footer.background.color) %}
   {% set footer_font_color = theme.footer.text.color.color %}
 
+  /* 1i. global settings */
+  
+  {% set global_radius = theme.global_settings.radius %}
+
   {###########################################################################}
   {##################             Bootstrap 5              ###################}
   {###########################################################################}
@@ -845,4 +849,9 @@
     {{ h3_font.style }};
     color: {{ h3_font.color }};
     font-size: {{ h3_font.size ~ h3_font.size_unit }};
+  }
+
+  /* global settings */
+  .cc-theme img{ 
+    border-radius: {{global_radius }}px;
   }

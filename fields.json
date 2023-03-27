@@ -171,6 +171,26 @@
     "required": false
   },
   {
+    "label": "Global settings",
+    "name": "global_settings",
+    "type": "group",
+    "children": [
+      {
+        "label": "Radius",
+        "name": "radius",
+        "type": "number",
+        "display": "text",
+        "max": 100,
+        "display_width": null,
+        "locked": false,
+        "step": 1,
+        "suffix": "px",
+        "required": false,
+        "default": 20
+      }
+    ]
+  },
+  {
     "label": "Spacing",
     "name": "spacing",
     "type": "group",
@@ -1979,7 +1999,7 @@
                 "step": 1,
                 "suffix": "px",
                 "required": false,
-                "default": 0
+                "default": 20
               },
               {
                 "label": "Top Right Radius",
@@ -1992,7 +2012,7 @@
                 "step": 1,
                 "suffix": "px",
                 "required": false,
-                "default": 0
+                "default": 20
               },
               {
                 "label": "Bottom Left Radius",
@@ -2005,7 +2025,7 @@
                 "step": 1,
                 "suffix": "px",
                 "required": false,
-                "default": 0
+                "default": 20
               },
               {
                 "label": "Bottom Right Radius",
@@ -2018,7 +2038,7 @@
                 "step": 1,
                 "suffix": "px",
                 "required": false,
-                "default": 0
+                "default": 20
               }
             ],
             "display_width": null,

@@ -1,0 +1,63 @@
+{% if module.target == true %}
+    {% set target = "_blank" %}
+{% else %}
+    {% set target = "_parent" %}
+{% endif %}
+
+{% set loadingAttr = module.img.loading != 'disabled' ? '{{ module.img.loading }}' : '' %}
+
+{# Do not prepend // when usign a personalization token, the link already has // or starts with /, the link is mailto, the link is an anchor, or the link is not defined #}
+{% unless (module.link is string_containing "{{") or (module.link is string_containing "//") or (module.link is string_startingwith "/") or (module.link is string_startingwith "mailto") or (module.link is string_startingwith "#") or !module.link %}
+  {% set link = "//" ~ module.link %}
+{% else %}
+  {% set link = module.link || "" %}
+{% endunless %} 
+
+<div class="cc-img">
+  {% linked_image
+    label="Linked Image",
+    src='{{ module.img.src }}',
+    alt='{{ module.img.alt }}',
+    width='{{ module.img.width }}',
+    height='{{ module.img.height }}',
+    link='{{ link }}',
+    target='{{ target }}',
+    open_in_new_tab='{{ target }}',
+    size_type='{{ module.img.size_type }}',
+    max_width='{{ module.img.max_width }}',
+    max_height='{{ module.img.max_height }}',
+    loading='{{ loadingAttr }}'
+  %}  
+</div>
+
+  <style>
+    .cc-img{
+      display:flex;
+      {% if  module.style.alignment_field.horizontal_align == 'CENTER' %}
+      justify-content: center;
+      {% elif module.style.alignment_field.horizontal_align == 'RIGHT' %}
+      justify-content: flex-end;
+      {% else %}
+       justify-content: flex-start;
+      {% endif %}
+      {% if  module.style.alignment_field.vertical_align == 'MIDDLE' %}
+      align-items: center;
+      {% elif module.style.alignment_field.vertical_align == 'BOTTOM' %}
+      align-items: flex-end;
+      {% else %}
+      align-items: flex-start;
+      {% endif %}
+    }
+    
+    .cc-img img{
+      padding:  {{ module.style.spacing_field.padding.top.value}}px {{ module.style.spacing_field.padding.right.value}}px   {{ module.style.spacing_field.padding.bottom.value}}px {{ module.style.spacing_field.padding.left.value}}px;
+      margin:  {{ module.style.spacing_field.margin.top.value}}px {{ module.style.spacing_field.margin.bottom.value}}px;
+      background-color:rgba({{module.style.background_color.color|convert_rgb }}, {{ module.style.background_color.opacity/ 100 }}); 
+      {{ module.style.border_field.css }};
+       {% if module.style.corder_radius %}
+      border-radius: {{ module.style.corder_radius }}px;
+      {% endif %}
+    }
+
+ 
+  </style>

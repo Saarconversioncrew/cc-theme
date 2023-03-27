@@ -1,0 +1,257 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "This is where you'd like to send your visitors when they click on the image. Please include a protocol (i.e. \"http://\") in the URL.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Link (optional)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "linked_image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.alignment_field.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.alignment_field.default.horizontal_align" : {
+    "message" : "RIGHT",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.alignment_field.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.alignment_field.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.alignment_field.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.alignment_field.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.background_color.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.background_color.default.color" : {
+    "message" : "#FFFFFF",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.background_color.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.background_color.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.background_color.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.background_color.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.border_field.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.border_field.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.border_field.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.border_field.label" : {
+    "message" : "Border",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.border_field.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.corder_radius.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.corder_radius.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.corder_radius.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.corder_radius.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.corder_radius.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.label" : {
+    "message" : "Style",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.name" : {
+    "message" : "linked_image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.spacing_field.default.margin.bottom.units" : {
+    "message" : "px",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.margin.bottom.value" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.margin.top.units" : {
+    "message" : "px",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.margin.top.value" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.bottom.units" : {
+    "message" : "px",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.bottom.value" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.left.units" : {
+    "message" : "px",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.left.value" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.right.units" : {
+    "message" : "px",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.right.value" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.top.units" : {
+    "message" : "px",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.default.padding.top.value" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.spacing_field.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.spacing_field.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.spacing_field.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.spacing_field.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Open link in new tab",
+    "description" : "",
+    "placeholders" : null
+  }
+}
