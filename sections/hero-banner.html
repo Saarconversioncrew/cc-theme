@@ -2,13 +2,17 @@
   templateType: section
   label: Hero banner
   isAvailableForNewContent: true
-  screenshotPath: ../images/section-previews/hero-banner.png
+  screenshotPath: /cc-website-theme/images/section-previews/hero-banner.png
   description: "Hero banner with title, text, button and image. "
 -->
 {% dnd_section
   background_color="rgba(248, 250, 252, 1)",
   padding={
     "default" : {
+      "bottom" : "7rem",
+      "top" : "7rem"
+    },
+    "mobile" : {
       "bottom" : "3rem",
       "top" : "3rem"
     }
@@ -76,10 +80,10 @@
         {% dnd_row %}
           {% dnd_module
             path="/linked-image",
-            offset=0, 
+            offset=0,
             width=12,
             img={
-              "alt" : "computer with clock",
+              "alt" : "pexels-pixabay-265129",
               "height" : 200,
               "loading" : "disabled",
               "max_height" : 2000,
@@ -88,11 +92,42 @@
               "src" : "https://24266986.fs1.hubspotusercontent-na1.net/hubfs/24266986/pexels-pixabay-265129.jpg",
               "width" : 300
             },
-            style={ }
+            style={
+              "spacing_field" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 49
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                }
+              }
+            }
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_row %}
   {% end_dnd_column %}
-{% end_dnd_section %} 
+{% end_dnd_section %}
