@@ -40,7 +40,9 @@ Helper classes with ability to override anything that comes before it
 */
 
 {% include './utilities/_helper.css' %}
-  /* Vendor
-*/  
+  
+/* Vendor */  
 {% include './vendor/bootstrapoverrides.css' %}
 
+/* Sections */   
+{% include './sections/tabbed-card.css' %}
