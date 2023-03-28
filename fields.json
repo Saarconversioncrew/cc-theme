@@ -2318,7 +2318,7 @@
                 "step": 1,
                 "suffix": "px",
                 "required": false,
-                "default": 3
+                "default": 10
               }
             ],
             "display_width": null,
@@ -2647,6 +2647,30 @@
             "type": "group",
             "children": [
               {
+                "label": "Text",
+                "name": "text",
+                "type": "group",
+                "children": [
+                  {
+                    "label": "Color",
+                    "name": "color",
+                    "type": "color",
+                    "display_width": null,
+                    "locked": false,
+                    "required": false,
+                    "default": {
+                      "color": "#000",
+                      "opacity": 100
+                    }
+                  }
+                ],
+                "display_width": null,
+                "locked": false,
+                "tab": "CONTENT",
+                "expanded": false,
+                "required": false
+              },
+              {
                 "label": "Background",
                 "name": "background",
                 "type": "group",
@@ -2660,7 +2684,7 @@
                     "required": false,
                     "inherited_value": {
                       "property_value_paths": {
-                        "color": "theme.global_colors.primary_dark.color"
+                        "color": "theme.global_colors.secondary.color"
                       }
                     },
                     "default": {
@@ -2690,39 +2714,39 @@
                     "default": {
                       "top": {
                         "width": {
-                          "value": 1,
+                          "value": 2,
                           "units": "px"
                         },
-                        "color": "#1a334e",
                         "opacity": 100,
-                        "style": "none"
+                        "style": "solid",
+                        "color": "#000" 
                       },
                       "right": {
                         "width": {
-                          "value": 1,
+                          "value": 2,
                           "units": "px"
                         },
-                        "color": "#1a334e",
                         "opacity": 100,
-                        "style": "none"
+                        "style": "solid",
+                        "color": "#000"
                       },
                       "bottom": {
                         "width": {
-                          "value": 1,
+                          "value": 2,
                           "units": "px"
                         },
-                        "color": "#1a334e",
                         "opacity": 100,
-                        "style": "none"
+                        "style": "solid",
+                        "color": "#000" 
                       },
                       "left": {
                         "width": {
-                          "value": 1,
+                          "value": 2,
                           "units": "px"
                         },
-                        "color": "#1a334e",
                         "opacity": 100,
-                        "style": "none"
+                        "style": "solid",
+                        "color": "#000"
                       }
                     }
                   }
@@ -2734,25 +2758,22 @@
                 "required": false
               },
               {
-                "label": "Text",
-                "name": "text",
+                "label": "Corner",
+                "name": "corner",
                 "type": "group",
                 "children": [
                   {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "visibility": {
-                      "hidden_subfields": {
-                        "opacity": true
-                      }
-                    },
+                    "label": "Radius",
+                    "name": "radius",
+                    "type": "number",
+                    "display": "text",
+                    "max": 100,
                     "display_width": null,
                     "locked": false,
+                    "step": 1,
+                    "suffix": "px",
                     "required": false,
-                    "default": {
-                      "color": "#ffffff"
-                    }
+                    "default": 10
                   }
                 ],
                 "display_width": null,
@@ -2792,11 +2813,7 @@
                 "display_width": null,
                 "locked": false,
                 "required": false,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global_colors.secondary.color"
-                  }
-                },
+                "color":"#FFFFFF",
                 "default": {
                   "opacity": 100
                 }
