@@ -68,7 +68,12 @@
                 }
               },
               "width_column" : 6
-            } ]
+            } ],
+            style={
+              "alignment_field" : {
+                "horizontal_align" : "LEFT"
+              }
+            }
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
@@ -79,50 +84,18 @@
       %}
         {% dnd_row %}
           {% dnd_module
-            path="/linked-image",
+            path="/cc-website-theme/modules/linked-image",
             offset=0,
             width=12,
             img={
               "alt" : "pexels-pixabay-265129",
-              "height" : 200,
+              "height" : 2000,
               "loading" : "disabled",
               "max_height" : 2000,
               "max_width" : 3000,
               "size_type" : "auto",
               "src" : "https://24266986.fs1.hubspotusercontent-na1.net/hubfs/24266986/pexels-pixabay-265129.jpg",
-              "width" : 300
-            },
-            style={
-              "spacing_field" : {
-                "margin" : {
-                  "bottom" : {
-                    "units" : "px",
-                    "value" : 0
-                  },
-                  "top" : {
-                    "units" : "px",
-                    "value" : 49
-                  }
-                },
-                "padding" : {
-                  "bottom" : {
-                    "units" : "px",
-                    "value" : 0
-                  },
-                  "left" : {
-                    "units" : "px",
-                    "value" : 0
-                  },
-                  "right" : {
-                    "units" : "px",
-                    "value" : 0
-                  },
-                  "top" : {
-                    "units" : "px",
-                    "value" : 0
-                  }
-                }
-              }
+              "width" : 3000
             }
           %}
           {% end_dnd_module %}
