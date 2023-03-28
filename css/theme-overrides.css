@@ -855,3 +855,6 @@
   .cc-theme img{ 
     border-radius: {{global_radius }}px;
   }
+  .cc-theme .dnd-column{
+    border-radius: {{global_radius }}px;
+  }

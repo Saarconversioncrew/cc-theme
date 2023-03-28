@@ -15,7 +15,7 @@
 {% endfor %}
 
 {# Button #}
-  <div class="row-button row">
+  <div class="cc-button row-button row">
     {% for item in module.button %}
      <div class="col">
       <div class="button-wrapper">
@@ -29,3 +29,21 @@
     </div>
     {% endfor %}
   </div>
+<style>
+.cc-button.row-button {
+   {% if  module.style.alignment_field.horizontal_align == 'CENTER' %}
+      justify-content: center;
+      {% elif module.style.alignment_field.horizontal_align == 'RIGHT' %}
+      justify-content: flex-end;
+      {% else %}
+       justify-content: flex-start;
+      {% endif %}
+      {% if  module.style.alignment_field.vertical_align == 'MIDDLE' %}
+      align-items: center;
+      {% elif module.style.alignment_field.vertical_align == 'BOTTOM' %}
+      align-items: flex-end;
+      {% else %}
+      align-items: flex-start;
+      {% endif %}
+  }
+</style>

@@ -1,4 +1,26 @@
 [ {
+  "id" : "5656b525-a4fe-fced-dd7d-ca56146dad14",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "48f27521-7450-d77b-d691-b82660b836b4",
+    "name" : "alignment_field",
+    "display_width" : null,
+    "label" : "Alignment",
+    "required" : false,
+    "locked" : false,
+    "alignment_direction" : "BOTH",
+    "type" : "alignment",
+    "default" : { }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
   "id" : "bd4bf6a1-5467-902f-4249-acdd3706fe20",
   "name" : "button",
   "display_width" : null,
