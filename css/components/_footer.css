@@ -3,6 +3,9 @@
     padding-top: 1.5rem;
     padding-bottom: 1rem;
 }
+.footer-section-cc img{
+    border-radius: 0!important;
+}
 .footer__container li a{
     color:#fff;
 }
