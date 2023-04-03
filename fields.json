@@ -2259,39 +2259,39 @@
                 "default": {
                   "top": {
                     "width": {
-                      "value": 2,
+                      "value": 1,
                       "units": "px"
                     },
-                    "opacity": 100,
+                    "opacity": 60,
                     "style": "solid",
-                    "color": "#D1D6DC"
+                    "color": "#6C757D"
                   },
                   "right": {
                     "width": {
-                      "value": 2,
+                      "value": 1,
                       "units": "px"
                     },
-                    "opacity": 100,
+                    "opacity": 60,
                     "style": "solid",
-                    "color": "#D1D6DC"
+                    "color": "#6C757D"
                   },
                   "bottom": {
                     "width": {
-                      "value": 2,
+                      "value": 1,
                       "units": "px"
                     },
-                    "opacity": 100,
+                    "opacity": 60,
                     "style": "solid",
-                    "color": "#D1D6DC"
+                    "color": "#6C757D"
                   },
                   "left": {
                     "width": {
-                      "value": 2,
+                      "value": 1,
                       "units": "px"
                     },
-                    "opacity": 100,
+                    "opacity": 60,
                     "style": "solid",
-                    "color": "#D1D6DC"
+                    "color": "#6C757D"
                   }
                 }
               }
@@ -2362,7 +2362,7 @@
                 },
                 "default": {
                   "color": "#FFFFFF",
-                  "size": 22,
+                  "size": 18,
                   "size_unit": "px"
                 }
               }
@@ -2397,7 +2397,7 @@
                 "default": {
                   "top": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -2405,7 +2405,7 @@
                   },
                   "right": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -2413,7 +2413,7 @@
                   },
                   "bottom": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
@@ -2421,7 +2421,7 @@
                   },
                   "left": {
                     "width": {
-                      "value": 1,
+                      "value": 0,
                       "units": "px"
                     },
                     "opacity": 100,
