@@ -394,6 +394,11 @@
     "description" : "",
     "placeholders" : null
   },
+  "slideshow_settings.slides.name" : {
+    "message" : "logo-slider",
+    "description" : "",
+    "placeholders" : null
+  },
   "slideshow_settings.slides.per_page.help_text" : {
     "message" : "",
     "description" : null,
@@ -442,6 +447,31 @@
   "slideshow_settings.slides.sizing.label" : {
     "message" : "Image Sizing",
     "description" : "",
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   },
   "styles.label" : {

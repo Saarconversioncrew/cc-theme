@@ -319,6 +319,11 @@
     "description" : "",
     "placeholders" : null
   },
+  "slideshow_settings.slides.name" : {
+    "message" : "logo-slider",
+    "description" : null,
+    "placeholders" : null
+  },
   "slideshow_settings.slides.per_page.inline_help_text" : {
     "message" : "當你每頁顯示超過 1 張投影片時，說明文字和縮圖便會消失。",
     "description" : "",
@@ -357,6 +362,31 @@
   "slideshow_settings.slides.sizing.label" : {
     "message" : "圖片大小",
     "description" : "",
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.label" : {
+    "message" : "Number",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   },
   "styles.label" : {

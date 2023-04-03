@@ -219,3 +219,10 @@ button.splide__arrow--next {
     top: 40%;
     background: none;
 }
+
+@media (max-width: 575.98px) {
+.cc-logo-slider button.splide__arrow--next,
+.cc-logo-slider button.splide__arrow--prev{
+  display:none;
+  }
+}

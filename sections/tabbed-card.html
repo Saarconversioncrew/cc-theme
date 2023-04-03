@@ -11,6 +11,10 @@
     "default" : {
       "bottom" : "3.5rem",
       "top" : "3.5rem"
+    },
+    "mobile" : {
+      "bottom" : "3rem",
+      "top" : "3rem"
     }
   },
   full_width=false
@@ -23,7 +27,15 @@
       {% dnd_module
         path="@hubspot/rich_text",
         offset=0,
-        width=12
+        width=12,
+        padding={
+        "default" : {
+          "bottom" : "3.5rem"
+        },
+        "mobile" : {
+          "bottom" : "3rem"
+        }
+      }
       %}
         {% module_attribute "html" %}
           <h2 style="text-align: center;">Something Powerful</h2>
@@ -32,7 +44,7 @@
     {% end_dnd_row %}
     {% dnd_row %}
       {% dnd_module
-        path="/cc-website-theme/modules/tabbed_card.module",
+        path="/cc-website-theme/modules/tabbed_card",
         offset=0,
         width=12,
         styles={

@@ -202,6 +202,8 @@
     display: flex;
     width: 48px;
     justify-content: center;
+    border-radius: {{theme.button_primary.corner.radius  ~ 'px'}};
+    border: 1px solid var(--bs-secondary)!important;
   }
 
   .hs-tabs__nudge--mobile-disabled {

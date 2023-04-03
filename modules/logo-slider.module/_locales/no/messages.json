@@ -99,6 +99,36 @@
     "description" : "",
     "placeholders" : null
   },
+  "slideshow_settings.slides.name" : {
+    "message" : "logo-slider",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.label" : {
+    "message" : "Number",
+    "description" : null,
+    "placeholders" : null
+  },
+  "slideshow_settings.slides.slides_per_page_mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "styles.label" : {
     "message" : "Stiler",
     "description" : "",

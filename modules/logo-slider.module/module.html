@@ -373,6 +373,15 @@
         </section>
     {% endif %}
 </div>
+<script>
+    if (window.innerWidth <= 768) {
+        var sliderConfig = document.querySelector('script[data-gallery_slider-config]');
+        var sliderConfigObj = JSON.parse(sliderConfig.textContent);
+        sliderConfigObj.slides_per_page = {{ module.slideshow_settings.slides.slides_per_page_mobile }};
+        sliderConfig.textContent = JSON.stringify(sliderConfigObj);
+    }
+</script>
+
 {% require_js position="head" %}
     <script data-gallery_slider-config="config_{{ name }}" type="application/json">
     {

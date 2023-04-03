@@ -293,6 +293,19 @@
       "preset" : null,
       "type" : "choice",
       "default" : "below"
+    }, {
+      "id" : "792f60e4-59fb-6298-42e8-897ef06606d7",
+      "name" : "slides_per_page_mobile",
+      "display_width" : null,
+      "label" : "Slides per page mobile",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1,
+      "max" : 5,
+      "step" : 1,
+      "type" : "number",
+      "default" : 3
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -302,7 +315,8 @@
       "sizing" : "natural",
       "aspect_ratio" : "16/9",
       "show_captions" : true,
-      "caption_position" : "below"
+      "caption_position" : "below",
+      "slides_per_page_mobile" : 3
     }
   }, {
     "id" : "slideshow_settings.movement",
@@ -451,7 +465,8 @@
       "sizing" : "natural",
       "aspect_ratio" : "16/9",
       "show_captions" : true,
-      "caption_position" : "below"
+      "caption_position" : "below",
+      "slides_per_page_mobile" : 3
     },
     "movement" : {
       "transition" : "slide",
