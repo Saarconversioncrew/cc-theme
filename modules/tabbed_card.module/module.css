@@ -29,7 +29,7 @@
   /* stylelint-disable */
   padding: 0;
   border: none;
-  border-radius: 0;
+
   margin-bottom: 0;
   background: none;
   color: initial;
@@ -113,7 +113,7 @@
   /* stylelint-disable */
   padding: 0;
   border: none;
-  border-radius: 0;
+  border-radius: {{theme.button_primary.corner.radius  ~ 'px'}}!important;
   margin-bottom: 0;
   background: none;
   color: initial;
@@ -202,7 +202,7 @@
     display: flex;
     width: 48px;
     justify-content: center;
-    border-radius: {{theme.button_primary.corner.radius  ~ 'px'}};
+    border-radius: {{theme.button_primary.corner.radius  ~ 'px'}}!important;
     border: 1px solid var(--bs-secondary)!important;
   }
 
