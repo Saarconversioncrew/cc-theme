@@ -2,7 +2,9 @@
 
 .hs-form-field {
   padding: 0.5rem 0;
+  width: 90%;
 }
+
 .hs-form-field ul{
   list-style: none;
   padding-left: 0;
@@ -17,16 +19,17 @@
 /* Inputs */
 .hs-form-field input,
 .hs-form-field select{
-  width: 80%;
+  width: 100%;
   height: 2rem;
   margin: 0.2rem 0;
   padding: 0 0.3rem;
 }
 .hs-form-field textarea{
-  width: 80%;
+  width: 100%;
   margin: 0.2rem 0;
   padding: 0 0.3rem;
 }
+
 /* Inputs - checkbox/radio */
 .hs-form-radio input,
 .hs-form-field [type="checkbox"]{
