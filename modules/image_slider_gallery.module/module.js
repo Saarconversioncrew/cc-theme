@@ -16,7 +16,7 @@ const DEFAULT_MODULE_CONFIG = Object.freeze({
 
 const getModuleConfig = moduleName => {
   const configJSONScript = document.querySelector(
-    `[data-logo_slider-config="config_${moduleName}"]`
+    `[data-gallery_slider-config="config_${moduleName}"]`
   );
   if (configJSONScript) {
     return JSON.parse(configJSONScript.textContent);
@@ -25,14 +25,14 @@ const getModuleConfig = moduleName => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const logoSliders = document.querySelectorAll('[data-logo_slider]');
+  const gallerySliders = document.querySelectorAll('[data-gallery_slider]');
 
-  if (logoSliders.length > 0) {
-    logoSliders.forEach(logoSlider => {
-      const sliderModuleName = logoSlider.dataset.logo_slider;
+  if (gallerySliders.length > 0) {
+    gallerySliders.forEach(gallerySlider => {
+      const sliderModuleName = gallerySlider.dataset.gallery_slider;
       const sliderConfig = getModuleConfig(sliderModuleName);
-      const mainSlider = logoSlider.querySelector('.splide__main');
-      const thumbnailNav = logoSlider.querySelector('.splide__nav');
+      const mainSlider = gallerySlider.querySelector('.splide__main');
+      const thumbnailNav = gallerySlider.querySelector('.splide__nav');
 
       if (mainSlider) {
         const mainSliderConfig = {

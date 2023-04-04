@@ -1,0 +1,43 @@
+<!--
+  templateType: section
+  label: image slider
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/image-slider.png
+  description: "image slider with 5 images in a row"
+--> 
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "3.5rem",
+      "top" : "3.5rem"
+    },
+    "mobile" : {
+      "bottom" : "3rem",
+      "top" : "3rem"
+    }
+  }
+%}
+  {% dnd_module
+    path="/cc-website-theme/modules/image_slider_gallery",
+    offset=0,
+    width=12,
+    styles={
+      "navigation" : {
+        "slider_arrows" : {
+          "left_icon" : {
+            "name" : "arrow-left",
+            "type" : "SOLID",
+            "unicode" : "f060"
+          },
+          "right_icon" : {
+            "name" : "arrow-right",
+            "type" : "SOLID",
+            "unicode" : "f061"
+          }
+        }
+      }
+    }
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}

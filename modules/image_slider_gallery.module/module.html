@@ -13,7 +13,7 @@
     '3/2': 1.5,
     '2/3': 0.66666667,
     '4/3': 1.33333333,
-    '3/4': 0.75,
+    '3/4': 0.75, 
     '16/9': 1.77777778
 } %}
 
@@ -60,13 +60,12 @@
 {% require_css %}
     <style>
         {% scope_css %}
-
-            .slider__container {
+            .slider__container-image {
                 {{ module.styles.slider.spacing.spacing.css }}
             }
 
             {% if show_captions and caption_position == 'overlay' %}
-                .splide__slide--caption {
+               .slider__container-image .splide__slide--caption {
                     position: absolute;
                     bottom: 0;
                     width: 100%;
@@ -76,27 +75,27 @@
                 }
             {% endif %}
 
-            .hs-gallery-slider-main__arrow .splide__arrow {
+            .slider__container-image .hs-gallery-slider-main__arrow .splide__arrow {
                 {% if ( main_arrows_styles.background_color.color ) %}
                     background-color: {{ main_arrows_styles.background_color.css }};
                 {% endif %}
 
             }
 
-            .hs-gallery-slider-main__arrow .splide__arrow svg {
+            .slider__container-image .hs-gallery-slider-main__arrow .splide__arrow svg {
                 {% if ( main_arrows_styles.fill_color.color ) %}
-                    fill: {{ main_arrows_styles.fill_color.css }}!important;
+                    fill: {{ main_arrows_styles.fill_color.css }};
                 {% endif %}
             }
 
             {% if module.slideshow_settings.slides.sizing == 'force_aspect_ratio' %}
-                .splide__slide--image_caption__wrapper {
+               .slider__container-image .splide__slide--image_caption__wrapper {
                     width: 100%;
                     height: 100%;
                 }
             {% endif %}
 
-            .splide__slide--image {
+            .slider__container-image .splide__slide--image {
                 {% if slide_styles.image.corner >= 0 %}
                 border-radius: {{ slide_styles.image.corner ~ "px" }};
                 {% endif %}
@@ -120,7 +119,7 @@
             }
 
             {% if ( show_captions ) %}
-            .splide__slide--caption {
+           .slider__container-image  .splide__slide--caption {
                 {{ slide_styles.caption.background.spacing.css }}
                 {% if ( slide_styles.caption.background.background.color ) %}
                     background-color: {{ slide_styles.caption.background.background.css }};
@@ -131,33 +130,34 @@
 
             {% if ( using_custom_main_arrows ) %}
                 {# splide tries to help by flipping the previous icon, so we'll flip it back. #}
-                .hs-gallery-slider-main__arrow .splide__arrow--prev svg {
+                .slider__container-image .hs-gallery-slider-main__arrow .splide__arrow--prev svg {
                     transform: scaleX(1);
                 }
 
-                .hs-gallery-slider-main__arrow .splide__arrow svg {
+                .slider__container-image .hs-gallery-slider-main__arrow .splide__arrow svg {
                     margin-top: 0.25rem;
                 }
             {% endif %}
 
             {% if ( dots_styles.color ) %}
-                .splide__pagination__page, .splide__toggle {
+                .slider__container-image .splide__pagination__page, .splide__toggle {
                     background: {{ dots_styles.color.css }} !important;
                 }
             {% endif %}
-           .cc-logo-slider .splide__pagination__page,
-            .cc-logo-slider .splide__toggle{
+
+            .slider__container-image .splide__pagination__page,
+            .slider__container-image .splide__toggle{
                background: {{theme.global_colors.primary.color}};
             }
 
             {% if show_thumbnails %}
-                .hs-gallery-slider-nav__arrow .splide__arrow {
+                .slider__container-image .hs-gallery-slider-nav__arrow .splide__arrow {
                     {% if ( thumb_nav_styles.arrow_background_color.color ) %}
                         background-color: {{ thumb_nav_styles.arrow_background_color.css }};
                     {% endif %}
                 }
 
-                .hs-gallery-slider-nav__arrow .splide__arrow svg {
+               .slider__container-image .hs-gallery-slider-nav__arrow .splide__arrow svg {
                     {% if ( thumb_nav_styles.fill_color.color ) %}
                         fill: {{ thumb_nav_styles.fill_color.css }};
                     {% endif %}
@@ -165,16 +165,16 @@
 
                 {% if ( using_custom_nav_arrows ) %}
                     {# splide tries to help by flipping the previous icon, so we'll flip it back. #}
-                    .hs-gallery-slider-nav__arrow .splide__arrow--prev svg {
+                   .slider__container-image .hs-gallery-slider-nav__arrow .splide__arrow--prev svg {
                         transform: scaleX(1);
                     }
 
-                    .hs-gallery-slider-nav__arrow .splide__arrow svg {
+                    .slider__container-image .hs-gallery-slider-nav__arrow .splide__arrow svg {
                         margin-top: 0.25rem;
                     }
                 {% endif %}
 
-                .splide__slide--nav-image {
+                .slider__container-image .splide__slide--nav-image {
                     {% if thumb_nav_styles.thumbnail.aspect_ratio %}
                     aspect-ratio: {{ thumb_nav_styles.thumbnail.aspect_ratio }};
                     {% endif %}
@@ -184,9 +184,8 @@
                 }
 
             {% endif %}
-        
-            .cc-logo-slider button.splide__arrow--prev svg,
-            .cc-logo-slider button.splide__arrow--next svg{
+            .slider__container-image button.splide__arrow--prev svg,
+            .slider__container-image button.splide__arrow--next svg{
                 fill: {{theme.global_colors.primary.color}};
             }
 
@@ -242,7 +241,7 @@
     {% set show_main_arrows = false %}
 {% endif %}
 {% set slider_aria_label = show_thumbnails ? module.default_text.slider_aria_label ~ ' ' ~ module.default_text.aria_label_thumbnails : module.default_text.slider_aria_label %}
-<div class="cc-logo-slider slider__container" data-logo_slider="{{ name }}">
+<div class="slider__container-image" data-gallery_slider="{{ name }}">
     <section class="splide__main splide" aria-label="{{ slider_aria_label }}">
 
         {% if ( using_custom_main_arrows ) %}
@@ -375,15 +374,14 @@
 </div>
 <script>
     if (window.innerWidth <= 768) {
-        var sliderConfig = document.querySelector('script[data-logo_slider-config]');
+        var sliderConfig = document.querySelector('script[data-gallery_slider-config]');
         var sliderConfigObj = JSON.parse(sliderConfig.textContent);
-        sliderConfigObj.slides_per_page = {{ module.slideshow_settings.slides.slides_per_page_mobile }};
+        sliderConfigObj.slides_per_page = {{ module.slideshow_settings.slides.slider_per_page_mobile }};
         sliderConfig.textContent = JSON.stringify(sliderConfigObj);
     }
 </script>
-
 {% require_js position="head" %}
-    <script data-logo_slider-config="config_{{ name }}" type="application/json">
+    <script data-gallery_slider-config="config_{{ name }}" type="application/json">
     {
         "instance_name": "config_{{ name }}",
         "show_thumbnails": "{{ show_thumbnails }}",
