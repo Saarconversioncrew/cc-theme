@@ -116,6 +116,11 @@
         {% endif %}
         {{ module.styles.card.spacing.spacing.css }}
       }
+      .card {
+        text-align: center;
+        border: none;
+        border-radius: {{theme.global_settings.radius}}px;
+      }
 
     {% end_scope_css %}
   </style>

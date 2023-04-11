@@ -1,0 +1,91 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pillarpage
+  screenshotPath: ../images/template-previews/pillar.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--home content-wrapper"
+%}
+
+    {% include_dnd_partial path="../sections/banner-pillarpage.html" %}
+
+    {% dnd_section
+        padding={
+          "default" : {
+            "bottom" : "3.5rem",
+            "top" : "7rem"
+          },
+          "mobile" : {
+            "bottom" : "3rem",
+            "top" : "3rem"
+          }
+        },
+        full_width=false
+      %}
+        {% dnd_column
+          offset=0,
+          width=12
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h2 style="text-align: center;">Product Benefits</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    
+    {% include_dnd_partial path="../sections/usp.html" %}
+
+    {% include_dnd_partial path="../sections/image-slider.html" %}
+
+    {% include_dnd_partial path="../sections/multi-row-content.html" %}
+
+    {% include_dnd_partial path="../sections/multi-row-content-image-right.html" %}
+    
+    {% dnd_section
+        padding={
+          "default" : {
+            "top" : "3.5rem"
+          }
+        }
+      %}
+        {% dnd_column
+          offset=0,
+          width=12
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <p style="text-align: center;"><span style="color: #999999;">Trusted by 500,000+ customers worldwide</span></p>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+      
+    {% include_dnd_partial path="../sections/logo-slider.html" %}
+
+    {% include_dnd_partial path="../sections/pricing.html" %}
+
+    {% include_dnd_partial path="../sections/form-image.html" %}
+    
+{% end_dnd_area %}
+{% endblock body %}
