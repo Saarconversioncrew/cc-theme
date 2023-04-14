@@ -10,11 +10,15 @@
 {% set pageTitle = "Confirm subscriptions" %}
 
 {% block body %}
-<section class="content-wrapper">
+<section class="container content-wrapper">
   <div class="systems-page">
-    {% module "subscriptions_confirmation"
-      path="@hubspot/email_subscriptions_confirmation"
-    %}
+    <div class="row">
+      <div class="col-12">
+        {% module "subscriptions_confirmation"
+          path="@hubspot/email_subscriptions_confirmation"
+        %}
+      </div>
+    </div>
   </div>
 </section>
 {% endblock body %}

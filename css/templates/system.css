@@ -1,9 +1,22 @@
 /* Error pages */
 
 .error-page {
+  min-height: 525px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  padding: 2rem 0;
   
 }
-
+.error-page .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+}
   .error-page:before {
     
   }
@@ -11,10 +24,19 @@
 /* System pages */
 
 .systems-page {
-  
+  min-height: 525px;  
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 0 6.8rem 0;
+}
+.system-page .col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-  .systems-page--search-results {
+  .systems-page--search-results { 
     
   }
 

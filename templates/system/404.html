@@ -10,15 +10,17 @@
 {% set pageTitle = "Error 404 | Page not found" %}
 
 {% block body %}
-<section class="content-wrapper">
+<section class="container content-wrapper">
   <div class="error-page" data-error="404">
+   <div class="row">
+     <div class="col">
     {% module "content"
       path="@hubspot/rich_text",
       html="<h1>Page not found.</h1>"
     %}
     {% module "button"
       path="../../modules/button",
-      button_text="Go Home"
+      button_text="Home"
       link={
         "url":
           {
@@ -29,6 +31,8 @@
           "no_follow": false
       }
     %}
+      </div>
+    </div>
   </div>
 </section>
 {% endblock body %}
