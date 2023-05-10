@@ -21,7 +21,17 @@
     offset=0,
     width=12
   %}
-    {% dnd_row %}
+    {% dnd_row
+    padding={
+    "default" : {
+      "bottom" : "3.5rem",
+    },
+    "mobile" : {
+      "bottom" : "3.5rem"
+    }
+  }
+    
+    %}
       {% dnd_module
         path="@hubspot/rich_text",
         offset=0,
