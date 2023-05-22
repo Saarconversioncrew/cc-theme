@@ -1,0 +1,27 @@
+<!--
+  templateType: section
+  label: Contact CTA
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/contact-cta.png
+  description: "Blue background with text"
+-->
+{% dnd_section
+  background_color="rgba(3, 16, 64, 1)",
+  padding={
+    "default" : {
+      "bottom" : "3rem",
+      "top" : "3rem"
+    }
+  }
+%}
+  {% dnd_module
+    path="@hubspot/rich_text",
+    offset=0,
+    width=12
+  %}
+    {% module_attribute "html" %}
+      <h2 style="text-align: center;"><span style="color: #ffffff;">Visit Our Office. Get Directions.</span></h2>
+      <div style="text-align: center;"><span style="color: #ffffff;">Click here to get directions</span></div>
+    {% end_module_attribute %}
+  {% end_dnd_module %}
+{% end_dnd_section %}
