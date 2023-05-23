@@ -13,15 +13,13 @@
             "opacity": true
           }
         },
-        "alternate_names": [
-          "primary_color"
-        ],
-        "display_width": null,
-        "locked": false,
-        "required": false,
-        "inherited_value": {},
+        "inherited_value": {
+          "property_value_paths": {
+            "color": "brand_settings.primaryColor"
+          }
+        },
         "default": {
-          "color": "#0b42ff"
+          "color": "#494A52"
         }
       },
       {
