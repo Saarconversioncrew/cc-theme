@@ -31,10 +31,11 @@
             "opacity": true
           }
         },
-        "display_width": null,
-        "locked": false,
-        "required": false,
-        "inherited_value": {},
+        "inherited_value": {
+          "property_value_paths": {
+            "color": "brand_settings.colors[1]"
+          }
+        },
         "default": {
           "color": "#031040"
         }
@@ -54,7 +55,11 @@
         "display_width": null,
         "locked": false,
         "required": false,
-        "inherited_value": {},
+        "inherited_value": {
+          "property_value_paths": {
+            "color": "brand_settings.colors[2]"
+          }
+        },
         "default": {
           "color": "#E7ECFF"
         }
@@ -3210,12 +3215,22 @@
                 "label": "Color",
                 "name": "color",
                 "type": "color",
+                "visibility": {
+                  "hidden_subfields": {
+                    "opacity": true
+                  }
+                },
                 "display_width": null,
                 "locked": false,
                 "required": false,
+                "inherited_value": {
+                  "property_value_paths": {
+                    "color": "theme.global_colors.primary_dark.color"
+                  }
+                },
                 "default": {
-                  "color": "#FFFFFF",
-                  "opacity": 100
+                  "color": null,
+                  "opacity": null
                 }
               }
             ],
@@ -3674,7 +3689,7 @@
             "required": false,
             "inherited_value": {
               "property_value_paths": {
-                "color": "theme.global_colors.secondary.color"
+                "color": "theme.global_colors.primary_dark.color"
               }
             },
             "default": {
