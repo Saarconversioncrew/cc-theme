@@ -94,7 +94,7 @@
 
 .legal-consent-container .hs-form-booleancheckbox-display > span,
 .legal-consent-container .hs-form-booleancheckbox-display > span p {
-  margin-left: 1rem !important;
+  margin-left: 0rem !important;
 }
 
 /* Validation */
