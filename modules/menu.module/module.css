@@ -7,6 +7,8 @@
 	    border-right: 0;
 	    border-bottom: .3em solid transparent;
 	    border-left: .3em solid;
+		margin-bottom: -0.2rem;
+		margin-left: 0.5rem;
 	}
 
 	.cc-navbar .megasubmenu{ 
@@ -22,11 +24,18 @@
 .cc-navbar .megasubmenu{
   margin:0.2rem 0 0 0.2rem;
 }
-.cc-navbar	.dropdown-menu{
-  min-width: 100%;
-}
+
 @media (min-width: 992px) { 
     .cc-navbar{
     padding: 0 1rem;
     }
+	.cc-navbar .dropdown-item{
+	white-space: initial;
+	}	
+	.cc-navbar	.dropdown-menu{
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(196,196,196,1);
+	-moz-box-shadow: 0px 0px 3px 0px rgba(196,196,196,1);
+	box-shadow: 0px 0px 3px 0px rgba(196,196,196,1);
+	min-width: 15rem;
+	}
  }

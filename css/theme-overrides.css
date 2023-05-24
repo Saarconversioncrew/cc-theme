@@ -864,3 +864,13 @@
     border-radius: {{global_radius }}px;
   }
 
+  @media (min-width: 768px) { 
+    .row-fluid {
+      --bs-gutter-x: {{theme.spacing.gutter_width_md}}rem;
+  }
+  }
+  @media (min-width: 1200px) { 
+    .row-fluid {
+      --bs-gutter-x: {{theme.spacing.gutter_width_lg}}rem;
+  }
+  }

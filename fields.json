@@ -211,6 +211,34 @@
         "min": 0,
         "required": false,
         "default": 80
+      },
+      {
+        "label": "Gutter width large screens",
+        "name": "gutter_width_lg",
+        "type": "number",
+        "display": "slider",
+        "max": 10,
+        "display_width": null,
+        "locked": false,
+        "step": 0.1,
+        "suffix": "rem",
+        "min": 0,
+        "required": false,
+        "default": 4
+      },
+      {
+        "label": "Gutter width medium screens",
+        "name": "gutter_width_md",
+        "type": "number",
+        "display": "slider",
+        "max": 5,
+        "display_width": null,
+        "locked": false,
+        "step": 0.1,
+        "suffix": "rem",
+        "min": 0,
+        "required": false,
+        "default": 2
       }
     ],
     "display_width": null,

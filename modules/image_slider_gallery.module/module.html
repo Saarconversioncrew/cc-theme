@@ -188,6 +188,20 @@
             .slider__container-image button.splide__arrow--next svg{
                 fill: {{theme.global_colors.primary.color}};
             }
+                .cc-image-slider button.splide__arrow--prev svg,
+                .cc-image-slider button.splide__arrow--next svg{
+                    fill: {{theme.global_colors.primary.color}};
+                }
+                .cc-image-slider .splide__arrow:hover{
+                    background: transparent!important;
+                    border: 2px solid {{theme.global_colors.primary_dark.color}};
+                }
+                .cc-image-slider .splide__arrow svg{
+                    margin-top: 0!important;
+                }
+                .cc-image-slider .splide__arrow > span{
+                    display:flex;
+                }
 
         {% end_scope_css %}
     </style>
@@ -241,7 +255,7 @@
     {% set show_main_arrows = false %}
 {% endif %}
 {% set slider_aria_label = show_thumbnails ? module.default_text.slider_aria_label ~ ' ' ~ module.default_text.aria_label_thumbnails : module.default_text.slider_aria_label %}
-<div class="slider__container-image" data-gallery_slider="{{ name }}">
+<div class="slider__container-image cc-image-slider" data-gallery_slider="{{ name }}">
     <section class="splide__main splide" aria-label="{{ slider_aria_label }}">
 
         {% if ( using_custom_main_arrows ) %}

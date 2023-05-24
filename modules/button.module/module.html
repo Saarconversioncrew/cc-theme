@@ -15,11 +15,24 @@
 {% endfor %}
 
 {# Button #}
-  <div class="cc-button row-button row">
+  <div class="cc-button row-button row" style="{% if  module.style.alignment_field.horizontal_align == 'CENTER' %}
+                                                justify-content: center;
+                                                {% elif module.style.alignment_field.horizontal_align == 'RIGHT' %}
+                                                justify-content: flex-end;
+                                                {% else %}
+                                                justify-content: flex-start;
+                                                {% endif %}
+                                                {% if  module.style.alignment_field.vertical_align == 'MIDDLE' %}
+                                                align-items: center;
+                                                {% elif module.style.alignment_field.vertical_align == 'BOTTOM' %}
+                                                align-items: flex-end;
+                                                {% else %}
+                                                align-items: flex-start;
+                                                {% endif %}">
     {% for item in module.button %}
      <div class="col">
       <div class="button-wrapper">
-        <a class="{% if item.button_style == "button-secondary" %} button-secondary {% else %} button {% endif %}" href="{{ href }}"
+        <a class="cc-btn {% if item.button_style == "button-secondary" %} button-secondary {% else %} button {% endif %}" href="{{ href }}"
         {% if item.link.open_in_new_tab %} target="_blank"{% endif %}
         {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
         >
@@ -31,19 +44,6 @@
   </div>
 <style>
 .cc-button.row-button {
-   {% if  module.style.alignment_field.horizontal_align == 'CENTER' %}
-      justify-content: center;
-      {% elif module.style.alignment_field.horizontal_align == 'RIGHT' %}
-      justify-content: flex-end;
-      {% else %}
-       justify-content: flex-start;
-      {% endif %}
-      {% if  module.style.alignment_field.vertical_align == 'MIDDLE' %}
-      align-items: center;
-      {% elif module.style.alignment_field.vertical_align == 'BOTTOM' %}
-      align-items: flex-end;
-      {% else %}
-      align-items: flex-start;
-      {% endif %}
+   
   }
 </style>

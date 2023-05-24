@@ -189,6 +189,16 @@
             .cc-logo-slider button.splide__arrow--next svg{
                 fill: {{theme.global_colors.primary.color}};
             }
+            .cc-logo-slider .splide__arrow:hover{
+                background: transparent!important;
+                border: 2px solid {{theme.global_colors.primary_dark.color}};
+            }
+            .cc-logo-slider .splide__arrow svg{
+                margin-top: 0;
+            }
+            .cc-logo-slider .splide__arrow > span{
+                display:flex;
+            }
 
         {% end_scope_css %}
     </style>
