@@ -701,32 +701,6 @@
         "type": "group",
         "children": [
           {
-            "label": "Font",
-            "name": "font",
-            "type": "font",
-            "visibility": {
-              "hidden_subfields": {
-                "size": true
-              }
-            },
-            "display_width": null,
-            "load_external_fonts": true,
-            "locked": false,
-            "required": false,
-            "inherited_value": {
-              "property_value_paths": {
-                "fallback": "theme.global_fonts.primary.fallback",
-                "font": "theme.global_fonts.primary.font",
-                "font_set": "theme.global_fonts.primary.font_set"
-              }
-            },
-            "default": {
-              "styles": {
-                "text-decoration": "underline"
-              }
-            }
-          },
-          {
             "label": "Color",
             "name": "color",
             "type": "color",
@@ -741,13 +715,126 @@
             "default": {
               "opacity": 100
             }
+          },
+          {
+            "label": "Focus",
+            "name": "focus",
+            "type": "group",
+            "children": [
+              {
+                "label": "Text",
+                "name": "text",
+                "type": "group",
+                "children": [
+                  {
+                    "label": "Color",
+                    "name": "color",
+                    "type": "color",
+                    "display_width": null,
+                    "locked": false,
+                    "required": false,
+                    "inherited_value": {
+                      "property_value_paths": {
+                        "color": "theme.global_colors.primary_dark.color"
+                      }
+                    },
+                    "default": {
+                      "opacity": 100
+                    }
+                  }
+                ],
+                "display_width": null,
+                "locked": false,
+                "tab": "CONTENT",
+                "expanded": false,
+                "required": false
+              },
+              {
+                "label": "Border",
+                "name": "border",
+                "type": "group",
+                "children": [
+                  {
+                    "label": "Border",
+                    "name": "border",
+                    "type": "border",
+                    "allow_custom_border_sides": false,
+                    "display_width": null,
+                    "locked": false,
+                    "required": false,
+                    "inherited_value": {
+                      "property_value_paths": {
+                        "color": "theme.global_colors.secondary.color"
+                      }
+                    },
+                    "default": {
+                      "top": {
+                        "width": {
+                          "value": 3,
+                          "units": "px"
+                        },
+                        "opacity": 100,
+                        "style": "solid",
+                        "color": "" 
+                      },
+                      "right": {
+                        "width": {
+                          "value": 2,
+                          "units": "px"
+                        },
+                        "opacity": 100,
+                        "style": "solid",
+                        "color": ""
+                      },
+                      "bottom": {
+                        "width": {
+                          "value": 2,
+                          "units": "px"
+                        },
+                        "opacity": 100,
+                        "style": "solid",
+                        "color": "" 
+                      },
+                      "left": {
+                        "width": {
+                          "value": 2,
+                          "units": "px"
+                        },
+                        "opacity": 100,
+                        "style": "solid",
+                        "color": ""
+                      }
+                    }
+                  },
+                  {
+                        "label": "Radius",
+                        "name": "radius",
+                        "type": "number",
+                        "display": "text",
+                        "max": 100,
+                        "display_width": null,
+                        "locked": false,
+                        "step": 1,
+                        "suffix": "px",
+                        "required": false,
+                        "default": 10     
+                
+                  }
+                ],
+                "display_width": null,
+                "locked": false,
+                "tab": "CONTENT",
+                "expanded": false,
+                "required": false
+              }      
+            ],
+            "display_width": null,
+            "locked": false,
+            "tab": "CONTENT",
+            "expanded": false,
+            "required": false
           }
-        ],
-        "display_width": null,
-        "locked": false,
-        "tab": "CONTENT",
-        "expanded": false,
-        "required": false
+        ]
       }
     ],
     "display_width": null,
@@ -1155,8 +1242,12 @@
                 "display_width": null,
                 "locked": false,
                 "required": false,
+                "inherited_value": {
+                  "property_value_paths": {
+                    "color": "theme.global_colors.primary_dark.color"
+                  }
+                },
                 "default": {
-                  "color": "#000",
                   "opacity": 100
                 }
               }
@@ -1208,15 +1299,20 @@
                 "display_width": null,
                 "locked": false,
                 "required": false,
+                "inherited_value": {
+                  "property_value_paths": {
+                    "color": "theme.global_colors.secondary.color"
+                  }
+                },
                 "default": {
                   "top": {
                     "width": {
-                      "value": 2,
+                      "value": 3,
                       "units": "px"
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000" 
+                    "color": "" 
                   },
                   "right": {
                     "width": {
@@ -1225,7 +1321,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000"
+                    "color": ""
                   },
                   "bottom": {
                     "width": {
@@ -1234,7 +1330,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000" 
+                    "color": "" 
                   },
                   "left": {
                     "width": {
@@ -1243,7 +1339,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000"
+                    "color": ""
                   }
                 }
               }
@@ -1693,7 +1789,7 @@
                 "locked": false,
                 "required": false,
                 "default": {
-                  "color": "#000",
+                  "color": "#fff",
                   "opacity": 100
                 }
               }
@@ -1718,8 +1814,8 @@
                 "required": false,
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.global_colors.secondary.color"
-                  }
+                    "color": "theme.global_colors.primary.color"
+                  } 
                 },
                 "default": {
                   "opacity": 100
@@ -1753,7 +1849,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000" 
+                    "color": "#fff" 
                   },
                   "right": {
                     "width": {
@@ -1762,7 +1858,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000"
+                    "color": "#fff"
                   },
                   "bottom": {
                     "width": {
@@ -1771,7 +1867,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000" 
+                    "color": "#fff" 
                   },
                   "left": {
                     "width": {
@@ -1780,7 +1876,7 @@
                     },
                     "opacity": 100,
                     "style": "solid",
-                    "color": "#000"
+                    "color": "#fff"
                   }
                 }
               }

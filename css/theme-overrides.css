@@ -65,6 +65,8 @@
   {% set body_font = theme.text.body_font.font %}
   
   {% set anchor_font = theme.text.links.font %}
+  {% set link_focus_color = theme.text.links.focus.text.color.color %}
+  {% set link_focus_border = theme.text.links.focus.border.border.css %}
   
   /* 1d. Buttons */
   
@@ -354,6 +356,10 @@
     color: {{ button_color_focus }}!important;
     background-color: {{ button_background_focus }}!important;
     border-radius: {{ button_corner_radius_focus }};
+  }
+  a:focus-visible{
+    color:{{link_focus_color}};
+    {{link_focus_border }}
   }
   button:focus,
   .button:focus,
