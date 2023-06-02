@@ -150,11 +150,6 @@ button.splide__arrow:disabled {
   opacity: 0.3;
 }
 
-button.splide__arrow:focus-visible {
-  outline: 3px solid #0bf;
-  outline-offset: 3px;
-}
-
 button.splide__arrow--prev {
   left: 1em;
 }

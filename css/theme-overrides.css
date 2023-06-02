@@ -65,8 +65,10 @@
   {% set body_font = theme.text.body_font.font %}
   
   {% set anchor_font = theme.text.links.font %}
+  {% set anchor_font_color = theme.text.links.color.color %}
   {% set link_focus_color = theme.text.links.focus.text.color.color %}
   {% set link_focus_border = theme.text.links.focus.border.border.css %}
+  {% set link_focus_border_color = theme.text.links.focus.border.border.color %}
   
   /* 1d. Buttons */
   
@@ -241,13 +243,22 @@
   
   a {
     {{ anchor_font.style }};
-    color: {{ anchor_font.color }};
+    color: {{ anchor_font_color }};
   }
   
   a:hover,
   a:focus {
     {{ anchor_font.style }};
     color: {{ color_variant(anchor_font.color, -40) }};
+  }
+  a:focus-visible{
+    color:{{link_focus_color}};
+    {{link_focus_border }}
+    border-color: {{link_focus_border_color}};
+    text-decoration: none;
+    border-radius : {{global_radius/2}}px;
+    padding: 1px 5px;
+    outline:none;
   }
   
   a:active {
@@ -317,6 +328,7 @@
   
   button,
   .button,
+  a.button,
   .hs-blog-post-listing__post-button {
     {{ button_border }}
     {{ button_spacing }}
@@ -327,7 +339,8 @@
     font-size: {{ button_font.size ~ button_font.size_unit }};
     text-transform: {{ button_text_transform }};
   }
-  .button-secondary{
+  .button-secondary,
+  a.button-secondary{
     {{ button_border_secondary }}
     {{ button_spacing_secondary }}
     {{ button_font_secondary.style }};
@@ -351,16 +364,16 @@
   .hs-blog-post-listing__post-button:focus,
   button:focus-visible,
   .button:focus-visible,
-  .hs-blog-post-listing__post-button:focus-visible {
+  .hs-blog-post-listing__post-button:focus-visible,
+  button.splide__arrow:focus-visible {
     {{ button_border_focus }};
     color: {{ button_color_focus }}!important;
     background-color: {{ button_background_focus }}!important;
     border-radius: {{ button_corner_radius_focus }};
+    outline: none!important;
+
   }
-  a:focus-visible{
-    color:{{link_focus_color}};
-    {{link_focus_border }}
-  }
+
   button:focus,
   .button:focus,
   .hs-blog-post-listing__post-button:focus,
@@ -379,13 +392,20 @@
     border-radius: {{ button_corner_radius_hover_secondary }};
   }
   .button-secondary:focus,
-  .button-secondary:focus-visible {
+  .button-secondary:focus-visible,
+  a.button-secondary:focus-visible {
     {{ button_border_focus_secondary }};
     color: {{ button_color_focus_secondary }}!important;
     background-color: {{ button_background_focus_secondary }}!important;
     border-radius: {{ button_corner_radius_focus_secondary }};
   }
-
+  .splide__slide--image__wrapper a:focus-visible{
+    border-radius: {{ global_radius }}px;  
+    border: {{link_focus_border}};
+    border-color: {{link_focus_border_color}};
+    display: inherit;
+    padding:0;
+  }
   button:active,
   .button:active,
   .hs-blog-post-listing__post-button:active {
